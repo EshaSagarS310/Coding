@@ -1,0 +1,20 @@
+student=[
+    {"name":"raju","dept":"cse","marks":[20,30,40]},
+    {"name":"manju","dept":"ece","marks":[50,67,33]},
+    {"name":"sanju","dept":"bca","marks":[93,90,83]},
+    {"name":"nanju","dept":"btech","marks":[23,34,55]},
+    {"name":"kanju","dept":"mca","marks":[48,84,21]}
+]
+for i in student:
+    total=sum(i[marks])
+    average=total//3
+    i["percentage"]=average
+student.sort(key=lambda x:x["percentage"],reverse=True)
+position=["f","s","t","f","fi"]
+for i in student:
+    print("{} scored {} -> stands{}".format(i["name"],i["percentage"],position[i]))
+
+
+
+
+
