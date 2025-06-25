@@ -1,0 +1,22 @@
+S = ["AAA", "BBB", "CCC", "DDD", "EEE", "FFF", "GGG", "III", "HHH", "JJJ"]
+M = [
+    [22, 33, 98],
+    [45, 77, 29],
+    [89, 87, 12],
+    [35, 65, 29],
+    [55, 44, 33],
+    [66, 22, 8],
+    [99, 27, 56],
+    [77, 38, 56],
+    [68, 63, 69],
+    [90, 80, 70]  
+]
+A = [False, False, True, False, False, True, False, False, True, False]  # Added status for 10th student
+
+P = [sum(marks) / len(marks) for marks in M]
+
+print("Average marks of students:", P)
+
+for i in range(len(S)):
+    if P[i] > 40 and not A[i]:
+        print(f"{i+1}: {S[i]} : {P[i]:.2f} - No Arrear")
