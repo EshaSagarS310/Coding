@@ -1,0 +1,51 @@
+import time
+import random
+
+name1 = input("Enter Player 1 name: ")
+name2 = input("Enter Player 2 name: ")
+
+num = []
+while len(num) < 5:
+    d = random.randint(1, 10)
+    if d not in num:
+        num.append(d)
+
+player1 = []
+player2 = []
+score1 = 0
+score2 = 0
+
+for i in range(3):
+    print("\n-------------- TURN {} --------------".format(i + 1))
+
+    a = int(input("Hi {}, make your prediction: ".format(name1)))
+    player1.append(a)
+    if a in num:
+        print("Correct!")
+        score1 += 1
+    else:
+        print("Wrong!")
+
+    b = int(input("Hi {}, make your prediction: ".format(name2)))
+    player2.append(b)
+    if b in num:
+        print("Correct!")
+        score2 += 1
+    else:
+        print("Wrong!")
+
+print("\n========== GAME SUMMARY ==========")
+print("Secret Numbers:", num)
+print("{}'s Choices: {}".format(name1, player1))
+print("{}'s Choices: {}".format(name2, player2))
+print("{}'s Score: {}".format(name1, score1))
+print("{}'s Score: {}".format(name2, score2))
+
+time.sleep(2)
+print("\n========== RESULT ==========")
+if score1 > score2:
+    print("WINNER:", name1)
+elif score2 > score1:
+    print("WINNER:", name2)
+else:
+    print("It's a Tie!")
