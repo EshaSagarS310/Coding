@@ -1,0 +1,15 @@
+x = 5
+y = 3
+height = 21
+step = 0
+time = 0
+
+while step < height:
+    time += 1
+    if time % 2 != 0:
+        step += x 
+    else:
+        step -= y  
+
+print("Time taken:", time)
+
