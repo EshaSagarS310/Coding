@@ -1,0 +1,11 @@
+num1 = int(input("Enter any number 1: "))
+num2 = int(input("Enter any number 2: "))
+
+a = num1
+b = num2
+
+while b != 0:
+    r = a % b
+    a, b = b, r
+
+print("GCD:", a)
