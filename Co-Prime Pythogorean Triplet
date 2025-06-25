@@ -10,3 +10,18 @@ for i in range(1, a):
             if j * j + k * k == i * i:
                 if coprime(j, i) and coprime(k, j) and coprime(i, k):
                     print(k, j, i)
+
+or 
+
+def gcd(a,b):
+    while b!=0:
+        a,b=b,a%b 
+    return a
+a=int(input("enter the any number:"))
+for i in range(1,a):
+    for j in range(1,i):
+        for k in range(1,j):
+            if(j*j+k*k==i*i):
+                if gcd(gcd(i,j),k)==1:
+                    print(k,j,i) 
+
