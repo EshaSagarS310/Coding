@@ -1,0 +1,35 @@
+def Circle():
+    radius=int(input("Enter the radius:"))
+    print("Area of the Circle:",3.14*radius*radius)
+def Square(a):
+    print("Area of the Square",a*a)
+def Rectangle():
+    l=int(input("Enter the length:"))
+    b=int(input("Enter the Base:"))
+    return l*b 
+def Triangle(a,b):
+    return 0.5*a*b
+while(True):
+    print("1.Circle")
+    print("2.Square")
+    print("3.Rectangle")
+    print("4.Triangle")
+    choice=int(input("Enter you Choice:"))
+    match choice:
+        case 1:
+            Circle()
+        case 2:
+            a=int(input("Enter the side:"))
+            Square(a)
+        case 3:
+            result=Rectangle()
+            print("Area of the Rectangle:",result)
+        case 4:
+            a=int(input("Enter the Length:"))
+            b=int(input("Enter the Base:"))
+            Triangle(a,b)
+        case _:
+            break
+
+
+
