@@ -1,0 +1,25 @@
+
+
+names=['A','B','C','D','E','G','H','I','J','I']
+memos=[0,1,1,0,2,1,0,1,0,0]
+salary=[1000,4000,3000,2000,8000,3000,1500,4000,1000,2500]
+data = list(zip(names, salary, memos))
+remain = [i for i in data if i[1] > 4000]
+remove = [i for i in data if i[1] <= 4000]
+remove.sort(key=lambda x: x[1], reverse=True)
+toremove = []
+for i in remain:
+    if i[2] > 1:
+        toremove.append(i)
+    if len(toremove) == 3:
+        break
+
+result = remove + toremove
+position = 0
+for item in result:
+    print(f"{position} : Name = {item[0]}, Salary = {item[1]}, Memos = {item[2]}")
+    position += 1
+
+p={"name":"ravi","age":25,"city":"chennai"}
+items=list(p.keys())
+print(items[1])
