@@ -1,0 +1,6 @@
+a=1
+for i in range(3,6):
+    for j in range(5,9):
+        a=a+i 
+    a=a+2 
+print(a)
