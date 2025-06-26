@@ -1,4 +1,4 @@
-a=input("Enter the Name : ")
+a="hai"
 b=a.upper()
 print(b)
 x='w'
