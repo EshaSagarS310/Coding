@@ -1,0 +1,8 @@
+a=input("Enter the Name : ")
+b=a.upper()
+print(b)
+x='w'
+if x.isupper():
+    print("Yes,it is Upper Case")
+else:
+    print("Not a Upper Case")
