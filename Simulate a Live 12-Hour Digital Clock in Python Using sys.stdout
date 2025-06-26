@@ -1,0 +1,21 @@
+import sys
+import time
+
+hour = 11
+minute = 4
+second = 0
+
+while True:
+    sys.stdout.write(f"\r{hour:02d}:{minute:02d}:{second:02d}")
+    sys.stdout.flush()
+    time.sleep(1)
+
+    second += 1
+    if second == 60:
+        second = 0
+        minute += 1
+    if minute == 60:
+        minute = 0
+        hour += 1
+    if hour == 13:  
+        hour = 1
