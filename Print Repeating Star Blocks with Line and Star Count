@@ -1,0 +1,12 @@
+block = int(input("Enter the Block: "))
+lines = int(input("Enter the Lines: "))
+stars = int(input("Enter the Stars: "))
+
+for b in range(block): 
+    count = 0
+    for i in range(lines):  
+        for j in range(stars): 
+            print("*", end="")
+            count += 1
+        print()  
+    print("-" * 25)  
