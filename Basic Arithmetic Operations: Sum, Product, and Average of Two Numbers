@@ -1,0 +1,5 @@
+a=float(input("Enter the First Number:"))
+b=float(input("Enter the Second Number:"))
+print("Sum:",a+b)
+print("Product:",a*b)
+print("Average:",(a+b)/2)
