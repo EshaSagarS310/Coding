@@ -1,0 +1,40 @@
+class Employee:
+    company = "ABC"
+    tax_percentage = 10
+    profit = 5000000
+
+    def __init__(self, name, age, salary, share_percentage):
+        self.name = name
+        self.age = age
+        self.salary = salary
+        self.share_percentage = share_percentage
+        self.tax = 0
+        self.share = 0
+
+    def calculate_tax(self):
+        self.tax = self.salary * Employee.tax_percentage * 0.01
+
+    def calculate_share(self):
+        self.share = Employee.profit * self.share_percentage * 0.01
+
+    def display(self):
+        self.calculate_share()
+        self.calculate_tax()
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Salary:", self.salary)
+        print("Tax Deduction:", self.tax)
+        print("Share from the Company:", self.share)
+
+# Create employee instances
+employee1 = Employee("AAA", 34, 5600, 11)
+employee2 = Employee("BBB", 50, 5100, 15)
+employee3 = Employee("CCC", 34, 5900, 12)
+
+# Display details
+employee1.display()
+print("-" * 30)
+employee2.display()
+print("-" * 30)
+employee3.display()
+print("-" * 30)
