@@ -26,12 +26,12 @@ class Employee:
         print("Tax Deduction:", self.tax)
         print("Share from the Company:", self.share)
 
-# Create employee instances
+
 employee1 = Employee("AAA", 34, 5600, 11)
 employee2 = Employee("BBB", 50, 5100, 15)
 employee3 = Employee("CCC", 34, 5900, 12)
 
-# Display details
+
 employee1.display()
 print("-" * 30)
 employee2.display()
