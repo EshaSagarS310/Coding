@@ -1,0 +1,10 @@
+a = "nckjdhcifoaufio"
+print(a[0])  
+
+a1 = "281"
+b1 = list(a1)
+print(b1)  
+
+
+b2 = list(map(int, list(input("Enter digits without spaces (e.g., 123): "))))
+print(b2) 
