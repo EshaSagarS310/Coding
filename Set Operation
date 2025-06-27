@@ -1,0 +1,4 @@
+a = set(str(7390))
+b = set(str(8309))
+print("Union:",a | b)
+print("Intersection:",a & b)
