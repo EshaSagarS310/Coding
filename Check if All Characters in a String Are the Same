@@ -1,0 +1,7 @@
+a="aaaaaaa"
+b="bbbbbbb"
+a1=set(a)
+if len(a1)==1:
+    print("True")
+else:
+    print("False")
