@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+url = 'https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population'
+tables = pd.read_html(url)
+df = tables[0]
+df = df[['Location', 'Population']].dropna()
+df['Population'] = df['Population'].astype(str).str.replace(',', '')
+df['Population'] = pd.to_numeric(df['Population'], errors='coerce')
+df = df.dropna(subset=['Population'])
+df = df[df['Location'] != 'World']
+top_countries = df.nlargest(10, 'Population')
+plt.figure(figsize=(8, 8))
+plt.pie(top_countries['Population'], labels=top_countries['Location'], autopct='%1.1f%%', startangle=140)
+plt.title('Top 10 Most Populous Countries')
+plt.axis('equal')
+plt.show()
